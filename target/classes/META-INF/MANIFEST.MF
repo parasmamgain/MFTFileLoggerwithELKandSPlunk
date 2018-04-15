@@ -1,5 +1,61 @@
 Manifest-Version: 1.0
 Built-By: parasmamgain
+Class-Path: lib/tika-core-1.17.jar lib/tika-parsers-1.17.jar lib/vorbi
+ s-java-tika-0.8.jar lib/jackcess-2.1.8.jar lib/commons-lang-2.6.jar l
+ ib/jackcess-encrypt-2.1.2.jar lib/jmatio-1.2.jar lib/apache-mime4j-co
+ re-0.8.1.jar lib/apache-mime4j-dom-0.8.1.jar lib/commons-compress-1.1
+ 4.jar lib/xz-1.6.jar lib/commons-codec-1.10.jar lib/pdfbox-2.0.8.jar 
+ lib/fontbox-2.0.8.jar lib/pdfbox-tools-2.0.8.jar lib/jempbox-1.8.13.j
+ ar lib/bcmail-jdk15on-1.54.jar lib/bcpkix-jdk15on-1.54.jar lib/bcprov
+ -jdk15on-1.54.jar lib/poi-3.17.jar lib/commons-collections4-4.1.jar l
+ ib/poi-scratchpad-3.17.jar lib/poi-ooxml-3.17.jar lib/poi-ooxml-schem
+ as-3.17.jar lib/xmlbeans-2.6.0.jar lib/curvesapi-1.04.jar lib/tagsoup
+ -1.2.1.jar lib/asm-5.0.4.jar lib/isoparser-1.1.18.jar lib/metadata-ex
+ tractor-2.10.1.jar lib/xmpcore-5.1.3.jar lib/boilerpipe-1.1.0.jar lib
+ /rome-1.5.1.jar lib/rome-utils-1.5.1.jar lib/vorbis-java-core-0.8.jar
+  lib/juniversalchardet-1.0.3.jar lib/jhighlight-1.0.2.jar lib/java-li
+ bpst-0.8.1.jar lib/junrar-0.7.jar lib/cxf-rt-rs-client-3.0.16.jar lib
+ /cxf-rt-transports-http-3.0.16.jar lib/cxf-core-3.0.16.jar lib/woodst
+ ox-core-asl-4.4.1.jar lib/stax2-api-3.1.4.jar lib/xmlschema-core-2.2.
+ 2.jar lib/cxf-rt-frontend-jaxrs-3.0.16.jar lib/javax.ws.rs-api-2.0.1.
+ jar lib/javax.annotation-api-1.2.jar lib/xalan-2.7.2.jar lib/serializ
+ er-2.7.2.jar lib/commons-exec-1.3.jar lib/opennlp-tools-1.8.3.jar lib
+ /commons-io-2.5.jar lib/json-simple-1.1.1.jar lib/json-1.8.jar lib/gs
+ on-2.8.1.jar lib/jul-to-slf4j-1.7.24.jar lib/jcl-over-slf4j-1.7.24.ja
+ r lib/netcdf4-4.5.5.jar lib/jcip-annotations-1.0.jar lib/jna-4.1.0.ja
+ r lib/grib-4.5.5.jar lib/protobuf-java-2.5.0.jar lib/jdom2-2.0.4.jar 
+ lib/jsoup-1.7.2.jar lib/bzip2-0.9.1.jar lib/cdm-4.5.5.jar lib/udunits
+ -4.5.5.jar lib/joda-time-2.2.jar lib/quartz-2.2.0.jar lib/c3p0-0.9.1.
+ 1.jar lib/ehcache-core-2.6.2.jar lib/guava-17.0.jar lib/jcommander-1.
+ 35.jar lib/httpservices-4.5.5.jar lib/httpclient-4.5.4.jar lib/httpmi
+ me-4.5.4.jar lib/commons-csv-1.0.jar lib/sis-utility-0.6.jar lib/sis-
+ netcdf-0.6.jar lib/sis-storage-0.6.jar lib/sis-referencing-0.6.jar li
+ b/sis-metadata-0.6.jar lib/geoapi-3.0.0.jar lib/jsr-275-0.9.3.jar lib
+ /sentiment-analysis-parser-0.1.jar lib/jackson-core-2.9.2.jar lib/tra
+ nsport-5.0.1.jar lib/elasticsearch-5.0.1.jar lib/lucene-core-6.2.1.ja
+ r lib/lucene-analyzers-common-6.2.1.jar lib/lucene-backward-codecs-6.
+ 2.1.jar lib/lucene-grouping-6.2.1.jar lib/lucene-highlighter-6.2.1.ja
+ r lib/lucene-join-6.2.1.jar lib/lucene-memory-6.2.1.jar lib/lucene-mi
+ sc-6.2.1.jar lib/lucene-queries-6.2.1.jar lib/lucene-queryparser-6.2.
+ 1.jar lib/lucene-sandbox-6.2.1.jar lib/lucene-spatial-6.2.1.jar lib/l
+ ucene-spatial-extras-6.2.1.jar lib/lucene-spatial3d-6.2.1.jar lib/luc
+ ene-suggest-6.2.1.jar lib/securesm-1.1.jar lib/jopt-simple-5.0.2.jar 
+ lib/hppc-0.7.1.jar lib/snakeyaml-1.15.jar lib/jackson-dataformat-smil
+ e-2.8.1.jar lib/jackson-dataformat-yaml-2.8.1.jar lib/jackson-datafor
+ mat-cbor-2.8.1.jar lib/t-digest-3.0.jar lib/HdrHistogram-2.1.6.jar li
+ b/transport-netty3-client-5.0.1.jar lib/netty-3.10.6.Final.jar lib/tr
+ ansport-netty4-client-5.0.1.jar lib/netty-buffer-4.1.5.Final.jar lib/
+ netty-codec-4.1.5.Final.jar lib/netty-codec-http-4.1.5.Final.jar lib/
+ netty-common-4.1.5.Final.jar lib/netty-handler-4.1.5.Final.jar lib/ne
+ tty-resolver-4.1.5.Final.jar lib/netty-transport-4.1.5.Final.jar lib/
+ reindex-client-5.0.1.jar lib/lang-mustache-client-5.0.1.jar lib/compi
+ ler-0.9.3.jar lib/percolator-client-5.0.1.jar lib/rest-5.0.2.jar lib/
+ httpcore-4.4.5.jar lib/httpasyncclient-4.1.2.jar lib/httpcore-nio-4.4
+ .5.jar lib/commons-logging-1.1.3.jar lib/log4j-to-slf4j-2.7.jar lib/l
+ og4j-api-2.7.jar lib/slf4j-api-1.7.21.jar lib/slf4j-simple-1.7.21.jar
+  lib/jackson-databind-2.9.4.jar lib/jackson-annotations-2.9.0.jar lib
+ /disruptor-3.3.6.jar
 Build-Jdk: 1.8.0
 Created-By: Maven Integration for Eclipse
+Main-Class: com.tika.document.App
 

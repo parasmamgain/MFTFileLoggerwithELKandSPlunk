@@ -3,14 +3,21 @@ package com.tika.document.entity;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 
+ * @author parasmamgain
+ * @github : https://github.com/parasmamgain/
+ * @email : mamgain.paras@outlook.com
+ *
+ */
 public class MyCustomDocument {
 	private String fileName;
 	private String filePath;
-	private String fileContent;
+	private Object fileContent;
 	private Map<String, String> fileMetaData;
-	
-	public MyCustomDocument(){
-		this.fileMetaData = new HashMap<String,String>();
+
+	public MyCustomDocument() {
+		this.fileMetaData = new HashMap<String, String>();
 	}
 
 	public String getFileName() {
@@ -29,7 +36,7 @@ public class MyCustomDocument {
 		this.filePath = filePath;
 	}
 
-	public String getFileContent() {
+	public Object getFileContent() {
 		return fileContent;
 	}
 

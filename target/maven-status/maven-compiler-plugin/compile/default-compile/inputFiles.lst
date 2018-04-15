@@ -1,4 +1,10 @@
 C:\Users\IBM_ADMIN\ICO\document\src\main\java\com\tika\document\entity\MyCustomDocument.java
+C:\Users\IBM_ADMIN\ICO\document\src\main\java\com\tika\document\entity\TransferComplete.java
 C:\Users\IBM_ADMIN\ICO\document\src\main\java\com\tika\document\ContentExtraction.java
+C:\Users\IBM_ADMIN\ICO\document\src\main\java\com\tika\document\entity\TransferStarted.java
+C:\Users\IBM_ADMIN\ICO\document\src\main\java\com\tika\document\entity\TransferProgress.java
 C:\Users\IBM_ADMIN\ICO\document\src\main\java\com\tika\document\App.java
+C:\Users\IBM_ADMIN\ICO\document\src\main\java\com\tika\document\entity\TransferCancelled.java
+C:\Users\IBM_ADMIN\ICO\document\src\main\java\com\tika\common\resources\ConfigurationProperties.java
 C:\Users\IBM_ADMIN\ICO\document\src\main\java\com\tika\elastic\ElasticConnection.java
+C:\Users\IBM_ADMIN\ICO\document\src\main\java\com\tika\document\entity\TransferDeleted.java
