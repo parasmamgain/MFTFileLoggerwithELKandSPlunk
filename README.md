@@ -28,21 +28,46 @@ e.g. - `java -jar mft-ELK-toolkit-0.0.1.jar configuration.properties`
 ##### configuration.properties: <br>
 This files consists of 6 properties .The property name should not be changed however the property values can be reassigned as per the requirement.
 ```
+# Configuration Properties for Elastic Search
+ELASTICSEARCHENABLED=true
 HOSTNAME=localhost
 PORTNUMBER=9300
-INDEXNAME=mftindex
-SOURCEPATH=D:\\elasticDocs
 CLUSTERNAME=elasticsearch
-DAYSINTERVAL=0
+INDEXNAME=mftindex
+
+#Configuration Properties for Splunk
+SPLUNKENABLED=true
+SPLUNKHOSTNAME=localhost
+SPLUNKPORTNUMBER=8089
+SPLUNKUSERNAME=parasmamgain123
+SPLUNKPASSWORD=F******3
+SPLUNKINDEXNAME=main
+
+
+# Common Properties for MFT File Logger Location
+SOURCEPATH=D:\\elasticDocs
+DAYSINTERVAL=50
+TIMEPERIOD=5
+
 ```
 Above are the default values of the keys in configuration.properties file.
-1. HOSTNAME: Hostname where the elastic serch server is running.
-2. PORTNUMBER: Port to bind to for incoming HTTP requests. Accepts a single value.
-3. INDEXNAME: the name of the Elastic Search index where this records will be stored.
-4. SOURCEPATH: the source location where the MFT stand alone file logger stores the files or the location where the MFT stand alone file logger files are present.
-5. CLUSTERNAME: A node can only join a cluster when it shares its cluster.name with all the other nodes in the cluster. The default name is `elasticsearch `.
-6. DAYSINTERVAL: This parameter accepts an integer value only which enables the application to make sure that older files are not processed again.
+1. ELASTICSEARCHENABLED : If elastic search feature should be enabled or not
+2. HOSTNAME: Hostname where the elastic serch server is running.
+3. PORTNUMBER: Port to bind to for incoming HTTP requests. Accepts a single value.
+4. CLUSTERNAME: A node can only join a cluster when it shares its cluster.name with all the other nodes in the cluster. The default name is `elasticsearch `.
+5. INDEXNAME: the name of the Elastic Search index where this records will be stored.
+
+6. SPLUNKENABLED : If splunk feature should be enabled or not
+7. SPLUNKHOSTNAME: Hostname where the splunk server is running.
+8. SPLUNKPORTNUMBER: Port to bind to for incoming HTTP requests. Accepts a single value.
+9. SPLUNKUSERNAME: username to connect with splunk.
+10.SPLUNKPASSWORD: password to connect with splunk.
+11.SPLUNKINDEXNAME: the name of the Splunk index where this records will be stored. 
+
+12. SOURCEPATH: the source location where the MFT stand alone file logger stores the files or the location where the MFT stand alone file logger files are present.
+13. DAYSINTERVAL: This parameter accepts an integer value only which enables the application to make sure that older files are not processed again.
 <br>e.g.- if `DAYSINTERVAL=2` then files which were modified in the last 2 days will ony be processed and rest files will be ignored.
+14. TIMEINTERVAL: This is timeperiod after which the new trasfer recods will be parsed and sent to the elastic search or splunk or both(based on the configuration above)
 ## Development Specific Instructions
 
 1. Download and configure eclipse.
