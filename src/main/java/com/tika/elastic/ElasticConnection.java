@@ -141,4 +141,6 @@ public class ElasticConnection {
 		String result = document.getID() + ":" + status;
 		return result;
 	}
+
+
 }

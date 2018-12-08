@@ -1,0 +1,107 @@
+[INFO]:Reading Property File
+[INFO]:Source Path is :D:\elasticDocs
+Detecting File type for path :D:\elasticDocs
+Detecting Directory type for path :D:\elasticDocs
+FILELOGGER-20180928100155662.log
+File Detected with name: FILELOGGER-20180928100155662.log
+Extracting Content
+STarting parser
+Parsing done
+BFGDB0054I: The file logger has successfully started
+2018-09-28T04:32:50;414d51204d514f435f4d465420202020a5a7ac5b20734904;[TSTR];   ;SRC_AGENT;MQOC_MFT;STANDARD;DEST_AGENT;MQOC_MFT;Administrator;;;com.ibm.wmqfte.SourceAgent=SRC_AGENT, com.ibm.wmqfte.DestinationAgent=DEST_AGENT, com.ibm.wmqfte.MqmdUser=Administrato, com.ibm.wmqfte.OriginatingUser=Administrator, com.ibm.wmqfte.OriginatingHost=192.168.56.1, com.ibm.wmqfte.TransferId=414d51204d514f435f4d465420202020a5a7ac5b20734904, com.ibm.wmqfte.Priority=0;
+414d51204d514f435f4d465420202020a5a7ac5b20734904:OK
+com.splunk.Index@a6cf40b
+{sourcetype=transferLog.log, type=transferStarted}
+{"time":"2018-09-28T04:32:50","type":"[TSTR]","resultCode":"   ","sourceAgentName":"SRC_AGENT","sourceAgentQMgr":"MQOC_MFT","sourceAgentType":"STANDARD","destinationAgentName":"DEST_AGENT","destinationAgentQMgr":"MQOC_MFT","userID":"Administrator","metaData":"","id":"414d51204d514f435f4d465420202020a5a7ac5b20734904","jobName":""}
+
+2018-09-28T04:32:51;414d51204d514f435f4d465420202020a5a7ac5b20734904;[TPRO];0  ;C:\Users\Administrator\Desktop\3.jpg;80809;file;leave ;;;;;;C:\Users\Administrator\Desktop\destination\3;80809;file;overwrite;;;;;;;;
+414d51204d514f435f4d465420202020a5a7ac5b20734904:OK
+
+2018-09-28T04:32:51;414d51204d514f435f4d465420202020a5a7ac5b20734904;[TCOM];0  ;SRC_AGENT;MQOC_MFT;STANDARD;DEST_AGENT;MQOC_MFT;STANDARD;Administrator;;BFGRP0032I: The file transfer request has successfully completed.;com.ibm.wmqfte.SourceAgent=SRC_AGENT, com.ibm.wmqfte.DestinationAgent=DEST_AGENT, com.ibm.wmqfte.MqmdUser=Administrato, com.ibm.wmqfte.OriginatingUser=Administrator, com.ibm.wmqfte.OriginatingHost=192.168.56.1, com.ibm.wmqfte.TransferId=414d51204d514f435f4d465420202020a5a7ac5b20734904, com.ibm.wmqfte.Priority=0;
+414d51204d514f435f4d465420202020a5a7ac5b20734904:OK
+
+BFGDB0054I: The file logger has successfully started
+BFGDB0054I: The file logger has successfully started
+BFGDB0054I: The file logger has successfully started
+BFGDB0054I: The file logger has successfully started
+BFGDB0054I: The file logger has successfully started
+2018-09-28T08:47:03;414d51204d514f435f4d465420202020a5a7ac5b20744102;[TSTR];   ;SRC_AGENT;MQOC_MFT;STANDARD;DEST_AGENT;MQOC_MFT;Administrator;;;com.ibm.wmqfte.SourceAgent=SRC_AGENT, com.ibm.wmqfte.DestinationAgent=DEST_AGENT, com.ibm.wmqfte.MqmdUser=Administrato, com.ibm.wmqfte.OriginatingUser=Administrator, com.ibm.wmqfte.OriginatingHost=192.168.56.1, com.ibm.wmqfte.TransferId=414d51204d514f435f4d465420202020a5a7ac5b20744102, com.ibm.wmqfte.Priority=0;
+414d51204d514f435f4d465420202020a5a7ac5b20744102:OK
+com.splunk.Index@6d71906b
+{sourcetype=transferLog.log, type=transferStarted}
+{"time":"2018-09-28T08:47:03","type":"[TSTR]","resultCode":"   ","sourceAgentName":"SRC_AGENT","sourceAgentQMgr":"MQOC_MFT","sourceAgentType":"STANDARD","destinationAgentName":"DEST_AGENT","destinationAgentQMgr":"MQOC_MFT","userID":"Administrator","metaData":"","id":"414d51204d514f435f4d465420202020a5a7ac5b20744102","jobName":""}
+
+2018-09-28T08:47:04;414d51204d514f435f4d465420202020a5a7ac5b20744102;[TPRO];0  ;C:\Users\Administrator\Desktop\3.jpg;80809;file;leave ;;;;;;C:\Users\Administrator\Desktop\destination\3;80809;file;overwrite;;;;;;;;
+414d51204d514f435f4d465420202020a5a7ac5b20744102:OK
+
+2018-09-28T08:47:04;414d51204d514f435f4d465420202020a5a7ac5b20744102;[TCOM];0  ;SRC_AGENT;MQOC_MFT;STANDARD;DEST_AGENT;MQOC_MFT;STANDARD;Administrator;;BFGRP0032I: The file transfer request has successfully completed.;com.ibm.wmqfte.SourceAgent=SRC_AGENT, com.ibm.wmqfte.DestinationAgent=DEST_AGENT, com.ibm.wmqfte.MqmdUser=Administrato, com.ibm.wmqfte.OriginatingUser=Administrator, com.ibm.wmqfte.OriginatingHost=192.168.56.1, com.ibm.wmqfte.TransferId=414d51204d514f435f4d465420202020a5a7ac5b20744102, com.ibm.wmqfte.Priority=0;
+414d51204d514f435f4d465420202020a5a7ac5b20744102:OK
+
+2018-09-28T09:28:45;414d51204d514f435f4d465420202020a5a7ac5b20746002;[TSTR];   ;SRC_AGENT;MQOC_MFT;STANDARD;DEST_AGENT;MQOC_MFT;Administrator;;;com.ibm.wmqfte.SourceAgent=SRC_AGENT, com.ibm.wmqfte.DestinationAgent=DEST_AGENT, com.ibm.wmqfte.MqmdUser=Administrato, com.ibm.wmqfte.OriginatingUser=Administrator, com.ibm.wmqfte.OriginatingHost=192.168.56.1, com.ibm.wmqfte.TransferId=414d51204d514f435f4d465420202020a5a7ac5b20746002, com.ibm.wmqfte.Priority=0;
+414d51204d514f435f4d465420202020a5a7ac5b20746002:OK
+com.splunk.Index@b6e9d1f7
+{sourcetype=transferLog.log, type=transferStarted}
+{"time":"2018-09-28T09:28:45","type":"[TSTR]","resultCode":"   ","sourceAgentName":"SRC_AGENT","sourceAgentQMgr":"MQOC_MFT","sourceAgentType":"STANDARD","destinationAgentName":"DEST_AGENT","destinationAgentQMgr":"MQOC_MFT","userID":"Administrator","metaData":"","id":"414d51204d514f435f4d465420202020a5a7ac5b20746002","jobName":""}
+
+2018-09-28T09:28:45;414d51204d514f435f4d465420202020a5a7ac5b20746002;[TPRO];0  ;C:\Users\Administrator\Desktop\3.jpg;80809;file;leave ;;;;;;C:\Users\Administrator\Desktop\destination\3;80809;file;overwrite;;;;;;;;
+414d51204d514f435f4d465420202020a5a7ac5b20746002:OK
+
+2018-09-28T09:28:45;414d51204d514f435f4d465420202020a5a7ac5b20746002;[TCOM];0  ;SRC_AGENT;MQOC_MFT;STANDARD;DEST_AGENT;MQOC_MFT;STANDARD;Administrator;;BFGRP0032I: The file transfer request has successfully completed.;com.ibm.wmqfte.SourceAgent=SRC_AGENT, com.ibm.wmqfte.DestinationAgent=DEST_AGENT, com.ibm.wmqfte.MqmdUser=Administrato, com.ibm.wmqfte.OriginatingUser=Administrator, com.ibm.wmqfte.OriginatingHost=192.168.56.1, com.ibm.wmqfte.TransferId=414d51204d514f435f4d465420202020a5a7ac5b20746002, com.ibm.wmqfte.Priority=0;
+414d51204d514f435f4d465420202020a5a7ac5b20746002:OK
+
+2018-09-28T09:31:13;414d51204d514f435f4d465420202020a5a7ac5b20747d02;[TSTR];   ;SRC_AGENT;MQOC_MFT;STANDARD;DEST_AGENT;MQOC_MFT;Administrator;;;com.ibm.wmqfte.SourceAgent=SRC_AGENT, com.ibm.wmqfte.DestinationAgent=DEST_AGENT, com.ibm.wmqfte.MqmdUser=Administrato, com.ibm.wmqfte.OriginatingUser=Administrator, com.ibm.wmqfte.OriginatingHost=192.168.56.1, com.ibm.wmqfte.TransferId=414d51204d514f435f4d465420202020a5a7ac5b20747d02, com.ibm.wmqfte.Priority=0;
+414d51204d514f435f4d465420202020a5a7ac5b20747d02:OK
+com.splunk.Index@d55e4fad
+{sourcetype=transferLog.log, type=transferStarted}
+{"time":"2018-09-28T09:31:13","type":"[TSTR]","resultCode":"   ","sourceAgentName":"SRC_AGENT","sourceAgentQMgr":"MQOC_MFT","sourceAgentType":"STANDARD","destinationAgentName":"DEST_AGENT","destinationAgentQMgr":"MQOC_MFT","userID":"Administrator","metaData":"","id":"414d51204d514f435f4d465420202020a5a7ac5b20747d02","jobName":""}
+
+2018-09-28T09:31:14;414d51204d514f435f4d465420202020a5a7ac5b20747d02;[TPRO];0  ;C:\Users\Administrator\Desktop\3.jpg;80809;file;leave ;;;;;;C:\Users\Administrator\Desktop\destination\3;80809;file;overwrite;;;;;;;;
+414d51204d514f435f4d465420202020a5a7ac5b20747d02:OK
+
+2018-09-28T09:31:14;414d51204d514f435f4d465420202020a5a7ac5b20747d02;[TCOM];0  ;SRC_AGENT;MQOC_MFT;STANDARD;DEST_AGENT;MQOC_MFT;STANDARD;Administrator;;BFGRP0032I: The file transfer request has successfully completed.;com.ibm.wmqfte.SourceAgent=SRC_AGENT, com.ibm.wmqfte.DestinationAgent=DEST_AGENT, com.ibm.wmqfte.MqmdUser=Administrato, com.ibm.wmqfte.OriginatingUser=Administrator, com.ibm.wmqfte.OriginatingHost=192.168.56.1, com.ibm.wmqfte.TransferId=414d51204d514f435f4d465420202020a5a7ac5b20747d02, com.ibm.wmqfte.Priority=0;
+414d51204d514f435f4d465420202020a5a7ac5b20747d02:OK
+
+2018-09-28T09:43:23;414d51204d514f435f4d465420202020a5a7ac5b2074c802;[TSTR];   ;SRC_AGENT;MQOC_MFT;STANDARD;DEST_AGENT;MQOC_MFT;Administrator;;;com.ibm.wmqfte.SourceAgent=SRC_AGENT, com.ibm.wmqfte.DestinationAgent=DEST_AGENT, com.ibm.wmqfte.MqmdUser=Administrato, com.ibm.wmqfte.OriginatingUser=Administrator, com.ibm.wmqfte.OriginatingHost=192.168.56.1, com.ibm.wmqfte.TransferId=414d51204d514f435f4d465420202020a5a7ac5b2074c802, com.ibm.wmqfte.Priority=0;
+414d51204d514f435f4d465420202020a5a7ac5b2074c802:OK
+com.splunk.Index@46d1b3ee
+{sourcetype=transferLog.log, type=transferStarted}
+{"time":"2018-09-28T09:43:23","type":"[TSTR]","resultCode":"   ","sourceAgentName":"SRC_AGENT","sourceAgentQMgr":"MQOC_MFT","sourceAgentType":"STANDARD","destinationAgentName":"DEST_AGENT","destinationAgentQMgr":"MQOC_MFT","userID":"Administrator","metaData":"","id":"414d51204d514f435f4d465420202020a5a7ac5b2074c802","jobName":""}
+
+2018-09-28T09:43:23;414d51204d514f435f4d465420202020a5a7ac5b2074c802;[TPRO];0  ;C:\Users\Administrator\Desktop\3.jpg;80809;file;leave ;;;;;;C:\Users\Administrator\Desktop\destination\3;80809;file;overwrite;;;;;;;;
+414d51204d514f435f4d465420202020a5a7ac5b2074c802:OK
+
+2018-09-28T09:43:24;414d51204d514f435f4d465420202020a5a7ac5b2074c802;[TCOM];0  ;SRC_AGENT;MQOC_MFT;STANDARD;DEST_AGENT;MQOC_MFT;STANDARD;Administrator;;BFGRP0032I: The file transfer request has successfully completed.;com.ibm.wmqfte.SourceAgent=SRC_AGENT, com.ibm.wmqfte.DestinationAgent=DEST_AGENT, com.ibm.wmqfte.MqmdUser=Administrato, com.ibm.wmqfte.OriginatingUser=Administrator, com.ibm.wmqfte.OriginatingHost=192.168.56.1, com.ibm.wmqfte.TransferId=414d51204d514f435f4d465420202020a5a7ac5b2074c802, com.ibm.wmqfte.Priority=0;
+414d51204d514f435f4d465420202020a5a7ac5b2074c802:OK
+
+2018-09-28T09:44:09;414d51204d514f435f4d465420202020a5a7ac5b2074d302;[TSTR];   ;SRC_AGENT;MQOC_MFT;STANDARD;DEST_AGENT;MQOC_MFT;Administrator;;;com.ibm.wmqfte.SourceAgent=SRC_AGENT, com.ibm.wmqfte.DestinationAgent=DEST_AGENT, com.ibm.wmqfte.MqmdUser=Administrato, com.ibm.wmqfte.OriginatingUser=Administrator, com.ibm.wmqfte.OriginatingHost=192.168.56.1, com.ibm.wmqfte.TransferId=414d51204d514f435f4d465420202020a5a7ac5b2074d302, com.ibm.wmqfte.Priority=0;
+414d51204d514f435f4d465420202020a5a7ac5b2074d302:OK
+com.splunk.Index@58804b8b
+{sourcetype=transferLog.log, type=transferStarted}
+{"time":"2018-09-28T09:44:09","type":"[TSTR]","resultCode":"   ","sourceAgentName":"SRC_AGENT","sourceAgentQMgr":"MQOC_MFT","sourceAgentType":"STANDARD","destinationAgentName":"DEST_AGENT","destinationAgentQMgr":"MQOC_MFT","userID":"Administrator","metaData":"","id":"414d51204d514f435f4d465420202020a5a7ac5b2074d302","jobName":""}
+
+2018-09-28T09:44:09;414d51204d514f435f4d465420202020a5a7ac5b2074d302;[TPRO];0  ;C:\Users\Administrator\Desktop\3.jpg;80809;file;leave ;;;;;;C:\Users\Administrator\Desktop\destination\3;80809;file;overwrite;;;;;;;;
+414d51204d514f435f4d465420202020a5a7ac5b2074d302:OK
+
+2018-09-28T09:44:09;414d51204d514f435f4d465420202020a5a7ac5b2074d302;[TCOM];0  ;SRC_AGENT;MQOC_MFT;STANDARD;DEST_AGENT;MQOC_MFT;STANDARD;Administrator;;BFGRP0032I: The file transfer request has successfully completed.;com.ibm.wmqfte.SourceAgent=SRC_AGENT, com.ibm.wmqfte.DestinationAgent=DEST_AGENT, com.ibm.wmqfte.MqmdUser=Administrato, com.ibm.wmqfte.OriginatingUser=Administrator, com.ibm.wmqfte.OriginatingHost=192.168.56.1, com.ibm.wmqfte.TransferId=414d51204d514f435f4d465420202020a5a7ac5b2074d302, com.ibm.wmqfte.Priority=0;
+414d51204d514f435f4d465420202020a5a7ac5b2074d302:OK
+
+2018-09-28T09:50:07;414d51204d514f435f4d465420202020a5a7ac5b2074f802;[TSTR];   ;SRC_AGENT;MQOC_MFT;STANDARD;DEST_AGENT;MQOC_MFT;Administrator;;;com.ibm.wmqfte.SourceAgent=SRC_AGENT, com.ibm.wmqfte.DestinationAgent=DEST_AGENT, com.ibm.wmqfte.MqmdUser=Administrato, com.ibm.wmqfte.OriginatingUser=Administrator, com.ibm.wmqfte.OriginatingHost=192.168.56.1, com.ibm.wmqfte.TransferId=414d51204d514f435f4d465420202020a5a7ac5b2074f802, com.ibm.wmqfte.Priority=0;
+414d51204d514f435f4d465420202020a5a7ac5b2074f802:OK
+com.splunk.Index@186af5f2
+{sourcetype=transferLog.log, type=transferStarted}
+{"time":"2018-09-28T09:50:07","type":"[TSTR]","resultCode":"   ","sourceAgentName":"SRC_AGENT","sourceAgentQMgr":"MQOC_MFT","sourceAgentType":"STANDARD","destinationAgentName":"DEST_AGENT","destinationAgentQMgr":"MQOC_MFT","userID":"Administrator","metaData":"","id":"414d51204d514f435f4d465420202020a5a7ac5b2074f802","jobName":""}
+
+2018-09-28T09:50:08;414d51204d514f435f4d465420202020a5a7ac5b2074f802;[TPRO];0  ;C:\Users\Administrator\Desktop\3.jpg;80809;file;leave ;;;;;;C:\Users\Administrator\Desktop\destination\3;80809;file;overwrite;;;;;;;;
+414d51204d514f435f4d465420202020a5a7ac5b2074f802:OK
+
+2018-09-28T09:50:08;414d51204d514f435f4d465420202020a5a7ac5b2074f802;[TCOM];0  ;SRC_AGENT;MQOC_MFT;STANDARD;DEST_AGENT;MQOC_MFT;STANDARD;Administrator;;BFGRP0032I: The file transfer request has successfully completed.;com.ibm.wmqfte.SourceAgent=SRC_AGENT, com.ibm.wmqfte.DestinationAgent=DEST_AGENT, com.ibm.wmqfte.MqmdUser=Administrato, com.ibm.wmqfte.OriginatingUser=Administrator, com.ibm.wmqfte.OriginatingHost=192.168.56.1, com.ibm.wmqfte.TransferId=414d51204d514f435f4d465420202020a5a7ac5b2074f802, com.ibm.wmqfte.Priority=0;
+414d51204d514f435f4d465420202020a5a7ac5b2074f802:OK
+
+2018-09-28T09:50:16;414d51204d514f435f4d465420202020a5a7ac5b2074fa0b;[TSTR];   ;SRC_AGENT;MQOC_MFT;STANDARD;DEST_AGENT;MQOC_MFT;Administrator;;;com.ibm.wmqfte.SourceAgent=SRC_AGENT, com.ibm.wmqfte.DestinationAgent=DEST_AGENT, com.ibm.wmqfte.MqmdUser=Administrato, com.ibm.wmqfte.OriginatingUser=Administrator, com.ibm.wmqfte.OriginatingHost=192.168.56.1, com.ibm.wmqfte.TransferId=414d51204d514f435f4d465420202020a5a7ac5b2074fa0b, com.ibm.wmqfte.Priority=0;
+414d51204d514f435f4d465420202020a5a7ac5b2074fa0b:OK
+com.splunk.Index@d26f97a0
+{sourcetype=transferLog.log, type=transferStarted}
+{"time":"2018-09-28T09:50:16","type":"[TSTR]","resultCode":"   ","sourceAgentName":"SRC_AGENT","sourceAgentQMgr":"MQOC_MFT","sourceAgentType":"STANDARD","destinationAgentName":"DEST_AGENT","destinationAgentQMgr":"MQOC_MFT","userID":"Administrator","metaData":"","id":"414d51204d514f435f4d465420202020a5a7ac5b2074fa0b","jobName":""}
+
+2018-09-28T09:50:17;414d51204d514f435f4d465420202020a5a7ac5b2074fa0b;[TPRO];0  ;C:\Users\Administrator\Desktop\3.jpg;80809;file;leave ;;;;;;C:\Users\Administrator\Desktop\destination\3;80809;file;overwrite;;;;;;;;
+414d51204d514f435f4d465420202020a5a7ac5b2074fa0b:OK

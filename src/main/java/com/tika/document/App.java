@@ -9,6 +9,8 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.splunk.HttpService;
+import com.splunk.SSLSecurityProtocol;
 import com.tika.common.resources.ConfigurationProperties;
 
 /**
@@ -21,16 +23,19 @@ import com.tika.common.resources.ConfigurationProperties;
 public class App {
 
 	public static void main(String[] args) {
-
+		String path = "";
+		System.setProperty("com.ibm.jsse2.disableSSLv3", "false");
+		HttpService.setSslSecurityProtocol(SSLSecurityProtocol.TLSv1_2);
 		PrintStream console = System.out;
-		File outputFile = new File("output.txt");
+		File outputFile = new File("logger.log");
 		try {
+			System.out.println("Starting MFT FileLogger to ELK Stack Migration :");
 			FileOutputStream fos = new FileOutputStream(outputFile);
 			PrintStream ps = new PrintStream(fos);
-			String path = "";
 			System.setOut(ps);
 			if (args.length > 0) {
 				File propertyFile = new File(args[0].toString().trim());
+				//File propertyFile = new File(tempPath);
 				if (propertyFile.exists() && propertyFile.isFile()) {
 					System.out.println("[INFO]:Reading Property File");
 					String propertyFilePath = args[0].trim();
@@ -45,9 +50,15 @@ public class App {
 				System.out.println("[ERROR]:Invalid Property File Path.Exiting Program:");
 				System.exit(0);
 			}
-
+			
+			while(true){
 			File file = new File(path);
 			detectFileType(file);
+			String minForSleep = ConfigurationProperties.timePeriod;
+			long timeForSleep = Integer.parseInt(minForSleep) * 60000;
+			System.out.println("Going to sleep at "+ new java.util.Date() +" for " + minForSleep + " minutes");
+			Thread.sleep(timeForSleep);
+			}
 
 		} catch (UnknownHostException e) {
 			// TODO Auto-generated catch block
@@ -71,20 +82,26 @@ public class App {
 
 	private static void detectFileType(File file)
 			throws UnknownHostException, JsonProcessingException, InterruptedException, ExecutionException {
+		System.out.println("Detecting File type for path :" + file.getAbsolutePath());
 		if (file.exists()) {
 			if (file.isDirectory()) {
 				pathIsADirectory(file);
 
 			} else if (file.isFile()) {
 				pathIsAFile(file);
+			} else {
+				System.out.println("No File or FilePath Pound");
 			}
+		} else {
+			pathIsADirectory(file);
 		}
 	}
 
 	private static void pathIsADirectory(File file)
 			throws UnknownHostException, JsonProcessingException, InterruptedException, ExecutionException {
+		System.out.println("Detecting Directory type for path :" + file.getAbsolutePath());
 		for (File tempFile : file.listFiles()) {
-
+			System.out.println(tempFile.getName());
 			if (tempFile.isDirectory()) {
 				pathIsADirectory(tempFile);
 			} else if (tempFile.isFile()) {
@@ -98,6 +115,7 @@ public class App {
 			throws UnknownHostException, JsonProcessingException, InterruptedException, ExecutionException {
 		long lastModified = file.lastModified();
 		long fileSize = file.length();
+		System.out.println("File Detected with name: "+ file.getName() );
 		if (fileSize == 0) {
 			System.out.printf("[INFO]:File:%s is empty there fore will not be parsed and will be ignored.\n",file.getAbsolutePath());
 		} else {
