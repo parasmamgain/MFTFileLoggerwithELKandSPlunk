@@ -17,12 +17,14 @@ import org.xml.sax.ContentHandler;
 import org.xml.sax.SAXException;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.tika.common.resources.ConfigurationProperties;
 import com.tika.document.entity.TransferCancelled;
 import com.tika.document.entity.TransferComplete;
 import com.tika.document.entity.TransferDeleted;
 import com.tika.document.entity.TransferProgress;
 import com.tika.document.entity.TransferStarted;
 import com.tika.elastic.ElasticConnection;
+import com.tika.elastic.SplunkConnection;
 
 /**
  * 
@@ -35,7 +37,7 @@ public class ContentExtraction {
 
 	public static void extractMFTTransferLog(String filePath)
 			throws UnknownHostException, JsonProcessingException, InterruptedException, ExecutionException {
-
+		System.out.println("Extracting Content");
 		TransferStarted transferDocument = null;
 		TransferComplete transferCompleted = null;
 		TransferProgress transferProgres = null;
@@ -46,10 +48,12 @@ public class ContentExtraction {
 		File document = new File(target);
 		Parser parser = new AutoDetectParser();
 
-		ContentHandler handler = new BodyContentHandler();
+		ContentHandler handler = new BodyContentHandler(-1);
 		Metadata metadata = new Metadata();
 		try {
+			System.out.println("STarting parser");
 			parser.parse(new FileInputStream(document), handler, metadata, new ParseContext());
+			System.out.println("Parsing done");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -57,6 +61,8 @@ public class ContentExtraction {
 		} catch (SAXException e) {
 			e.printStackTrace();
 		} catch (TikaException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		/*
@@ -68,11 +74,11 @@ public class ContentExtraction {
 		 */
 		String[] contentList = (handler.toString()).split("\\n");
 		for (String transferRecord : contentList) {
-
+			System.out.println(transferRecord);
 			String[] td = transferRecord.split(";");
 
 			if (td.length <= 2) {
-				break;
+				continue;
 			}
 
 			switch (td[2].trim()) {
@@ -80,9 +86,9 @@ public class ContentExtraction {
 				if (td.length == 14) {
 					transferDocument = new TransferStarted(td[0], td[1], td[2], td[3], td[4], td[5], td[6], td[7],
 							td[8], td[9], td[10], td[11]);
-					System.out.println(ElasticConnection.IndexFile(transferDocument));
+					logData(transferDocument);
 				} else {
-					// raise exception
+					System.out.println("Unable to parse TSTR");
 				}
 				break;
 			}
@@ -90,9 +96,10 @@ public class ContentExtraction {
 				if (td.length == 15) {
 					transferCancelled = new TransferCancelled(td[0], td[1], td[2], td[3], td[4], td[5], td[6], td[7],
 							td[8], td[9], td[10], td[11], td[12], td[13]);
-					System.out.println(ElasticConnection.IndexFile(transferCancelled));
+					logData(transferCancelled);
 				} else {
 					// raise exception
+					System.out.println("Unable to parse TCAN");
 				}
 				break;
 			}
@@ -100,9 +107,9 @@ public class ContentExtraction {
 				if (td.length == 15) {
 					transferCompleted = new TransferComplete(td[0], td[1], td[2], td[3], td[4], td[5], td[6], td[7],
 							td[8], td[9], td[10], td[11], td[12], td[13]);
-					System.out.println(ElasticConnection.IndexFile(transferCompleted));
+					logData(transferCompleted);
 				} else {
-					// raise exception
+					System.out.println("Unable to parse TCOM");
 				}
 				break;
 			}
@@ -110,9 +117,9 @@ public class ContentExtraction {
 				if (td.length == 15) {
 					transferDeleted = new TransferDeleted(td[0], td[1], td[2], td[3], td[4], td[5], td[6], td[7], td[8],
 							td[9], td[10], td[11], td[12], td[13]);
-					System.out.println(ElasticConnection.IndexFile(transferDeleted));
+					logData(transferDeleted);
 				} else {
-					// raise exception
+					System.out.println("Unable to parse TDEL");
 				}
 				break;
 			}
@@ -121,14 +128,13 @@ public class ContentExtraction {
 					transferProgres = new TransferProgress(td[0], td[1], td[2], td[3], td[4], td[5], td[6], td[7],
 							td[8], td[9], td[10], td[11], td[12], td[13], td[14], td[15], td[16], td[17], td[18],
 							td[19], td[20], td[21], td[22], td[23], td[24]);
-					System.out.println(ElasticConnection.IndexFile(transferProgres));
+					logData(transferProgres);
 				} else {
-					// raise exception
+					System.out.println("Unable to parse TPRO");
 				}
 				break;
 			}
 			default: {
-
 				System.out.println("Invalid Log format detected:" + td[2].trim());
 			}
 			}
@@ -136,4 +142,85 @@ public class ContentExtraction {
 
 	}
 
+	private static void logData(Object transferRecord) throws UnknownHostException, JsonProcessingException, InterruptedException, ExecutionException {
+
+		boolean elasticEnabled = ConfigurationProperties.elasticSearchEnabled;
+		boolean splunkEnabled = ConfigurationProperties.splunkEnabled;
+		//boolean loggingServiceEnabled = ConfigurationProperties.loggingServiceEnabled;
+
+		if (elasticEnabled) {
+			if (transferRecord instanceof TransferStarted) {
+				System.out.println(ElasticConnection.IndexFile((TransferStarted) transferRecord));
+			}
+
+			if (transferRecord instanceof TransferProgress) {
+				System.out.println(ElasticConnection.IndexFile((TransferProgress) transferRecord));
+			}
+
+			if (transferRecord instanceof TransferComplete) {
+				System.out.println(ElasticConnection.IndexFile((TransferComplete) transferRecord));
+			}
+
+			if (transferRecord instanceof TransferDeleted) {
+				System.out.println(ElasticConnection.IndexFile((TransferDeleted) transferRecord));
+			}
+
+			if (transferRecord instanceof TransferCancelled) {
+				System.out.println(ElasticConnection.IndexFile((TransferCancelled) transferRecord));
+			}
+		} else {
+			System.out.println("Flag for ELASTICSEARCHENABLED is false , data will not be logged in the Elastic Search");
+		}
+		
+		// Logging Data for Splunk
+		if (splunkEnabled) {
+			if (transferRecord instanceof TransferStarted) {
+				System.out.println(SplunkConnection.IndexFile((TransferStarted) transferRecord));
+			}
+
+			if (transferRecord instanceof TransferProgress) {
+				System.out.println(SplunkConnection.IndexFile((TransferProgress) transferRecord));
+			}
+
+			if (transferRecord instanceof TransferComplete) {
+				System.out.println(SplunkConnection.IndexFile((TransferComplete) transferRecord));
+			}
+
+			if (transferRecord instanceof TransferDeleted) {
+				System.out.println(SplunkConnection.IndexFile((TransferDeleted) transferRecord));
+			}
+
+			if (transferRecord instanceof TransferCancelled) {
+				System.out.println(SplunkConnection.IndexFile((TransferCancelled) transferRecord));
+			}
+		} else {
+			System.out.println("Flag for SplunKEnabled is false , data will not be logged in the Splunk");
+		}
+
+		
+		/*if (loggingServiceEnabled) {
+			if (transferRecord instanceof TransferStarted) {
+				System.out.println(LoggingService.IndexFile((TransferStarted) transferRecord));
+			}
+
+			if (transferRecord instanceof TransferProgress) {
+				System.out.println(LoggingService.IndexFile((TransferProgress) transferRecord));
+			}
+
+			if (transferRecord instanceof TransferComplete) {
+				System.out.println(LoggingService.IndexFile((TransferComplete) transferRecord));
+			}
+
+			if (transferRecord instanceof TransferDeleted) {
+				System.out.println(LoggingService.IndexFile((TransferDeleted) transferRecord));
+			}
+
+			if (transferRecord instanceof TransferCancelled) {
+				System.out.println(LoggingService.IndexFile((TransferCancelled) transferRecord));
+			}
+		} else {
+			System.out.println("Flag for LOGGINGSERVICEENABLED is false , data will not be logged in the Elastic Search");
+		}*/
+
+	}
 }
