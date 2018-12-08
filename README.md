@@ -15,6 +15,8 @@ Following are the softwares/tools that must be installed/configured with the mac
 - Download ,Install and Start Elastic Search (https://www.elastic.co/downloads/past-releases/elasticsearch-5-0-1)<br>
 3. Kibana 5.0.1:<br>
 - Dowmload ,Install and Start Kibana (https://www.elastic.co/downloads/past-releases/kibana-5-0-1) <br>
+4. Splunk 7.2.1 <br>
+- Download ,Install and Start Splunk (https://www.splunk.com/en_us/download/splunk-enterprise.html) <br>
 
 ## General Instructions
 following are the steps that could be followed to run this application.<br>
